@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    max-height: 100vh;
+}
+.heading{
+    font-size: 30px;
+}
+.count{
+    display: flex;
+    font-size: 25px;
+}
+.photo {
+    width: 200px; 
+    height: 200px;
+}  
+.photo img {
+    width: 100%;
+    height: auto; 
+}
+.hints{
+    font-size: 25px;
+}
+.in{
+    font-size: 25px;
+}
+  
