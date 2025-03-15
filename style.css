@@ -1,92 +1,150 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-    cursor: url('eye-cursor.png'), auto;
 }
-:root{
+:root {
     --light: white;
     --dark: black;
 }
-body{
+body {
     background-color: var(--light);
     color: var(--dark);
-    transition: background-color 0.3s color 0.3s;
-}
-.box{
+    transition: background-color 0.2s, color 0.2s;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 70px;
-    max-height: 100vh;
-}
-.heading{
-    font-size: 30px;
-    display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    position: relative;
+    height: 100vh;
+    padding: 20px;
 }
 .dark-mode{
     background-color: var(--dark);
     color: var(--light);
 }
-button{
-    cursor: pointer;
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.heading {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+h1 {
+    flex: 1;
+    text-align: center;
+}
+#mode {
+    position: absolute;
+    /* margin-left: auto; */
+    top: 3rem;
+    right: 3rem;
     padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+    padding: 8px 15px;
     border: 2px solid grey;
     border-radius: 30px;
-    font-size: 17px;
+    font-size: 16px;
 }
-a{
-    cursor: pointer;
-}
-#userinput{
-    cursor: text;
-    width: 50px;
-    height: 40px;
-    font-size: 2rem;
-}
-#userinput input::placeholder{
-    font-size: 10px;
-}
-#mode{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    cursor: pointer;
-}
-.heading button{
-    top: 0;
-    right: 0;
-}
-.count{
-    display: flex;
-    font-size: 25px;
+.count, .info, .hints, .in {
+    font-size: 20px;
 }
 .photo {
-    width: 200px; 
-    height: 200px;
-} 
-.info{
-    font-size: 25px;
-} 
+    width: 150px;
+    height: 150px;
+}
 .photo img {
     width: 100%;
-    height: auto; 
+    height: auto;
 }
-.hints{
-    font-size: 25px;
+#userinput {
+    width: 80px;
+    height: 40px;
+    font-size: 1.5rem;
 }
-.in{
-    font-size: 25px;
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.1rem;
 }
-.copyright{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 10px;
+.copyright a{
+    text-decoration: none;
+    font-weight: bolder;
+    animation: colchange 1.2s linear infinite;
+}
+@keyframes colchange {
+    0%{
+        color: orange;
+    }
+    33%{
+        color: blue;
+    }
+    99%{
+        color: green;
+    }
+}
+@media (max-width: 768px) {
+    .box {
+        gap: 20px;
+    }
+    .heading {
+        font-size: 20px;
+    }
+    .count, .info, .hints, .in {
+        font-size: 18px;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .photo {
+        width: 120px;
+        height: 120px;
+    }
+    #userinput {
+        width: 70px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 480px) {
+    .box {
+        gap: 15px;
+        width: 100%;
+    }
+    .heading {
+        font-size: 18px;
+    }
+    .count, .info, .hints, .in {
+        font-size: 16px;
+    }
+    button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .photo {
+        width: 100px;
+        height: 100px;
+    }
+    #userinput {
+        width: 60px;
+        height: 30px;
+        font-size: 1rem;
+    }
 }
