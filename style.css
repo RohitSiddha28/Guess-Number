@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    cursor: url('eye-cursor.png'), auto;
+}
+:root{
+    --light: white;
+    --dark: black;
+}
+body{
+    background-color: var(--light);
+    color: var(--dark);
+    transition: background-color 0.3s color 0.3s;
 }
 .box{
     display: flex;
@@ -13,6 +23,45 @@
 }
 .heading{
     font-size: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.dark-mode{
+    background-color: var(--dark);
+    color: var(--light);
+}
+button{
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 2px solid grey;
+    border-radius: 30px;
+    font-size: 17px;
+}
+a{
+    cursor: pointer;
+}
+#userinput{
+    cursor: text;
+    width: 50px;
+    height: 40px;
+    font-size: 2rem;
+}
+#userinput input::placeholder{
+    font-size: 10px;
+}
+#mode{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+.heading button{
+    top: 0;
+    right: 0;
 }
 .count{
     display: flex;
@@ -21,7 +70,10 @@
 .photo {
     width: 200px; 
     height: 200px;
-}  
+} 
+.info{
+    font-size: 25px;
+} 
 .photo img {
     width: 100%;
     height: auto; 
@@ -32,4 +84,9 @@
 .in{
     font-size: 25px;
 }
-  
+.copyright{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
