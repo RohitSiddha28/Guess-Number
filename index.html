@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Number Guess</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box">
-        <button id = "mode">Dark</button>
-        <div class="heading">
-            <h1>Guess The Number!</h1>
+      <button id="mode">Dark</button>
+      <div class="heading">
+        <h1>Guess The Number!</h1>
+      </div>
+      <div class="count">Total guess: &nbsp<span id="data">0</span></div>
+      <div class="photo">
+        <img src="qs_mark.webp" alt="photo" />
+      </div>
+      <div class="info">Good Luck!</div>
+      <div class="hints">The number is between 0 - 100</div>
+      <div class="in">
+        <label for="userinput">Your Guess: </label>
+        <input
+          type="number"
+          id="userinput"
+          min="0"
+          max="100"
+          step="1"
+          placeholder="28"
+        />
+        <button id = "Submit">Submit</button>
+        <div class="btns">
+          <button id="easy">Easy</button>
+          <button id="medium">Medium</button>
+          <button id="hard">Hard</button>
+          <button id="restart">Restart</button>
         </div>
-        <div class="count">Total guess: &nbsp<span id = "data">0</span></div>
-        <div class="photo">
-            <img src="qs_mark.webp" alt="photo">
-        </div>
-        <div class="info">Good Luck!</div>
-        <div class="hints">The number is between 0 - 100</div>
-        <div class="in">
-            <label for="userinput">Your Guess: </label>
-            <input type="number" id = "userinput" min="0" max="100" step="1" placeholder="28">
-            <button id = "Submit">Submit</button>
-        </div>
-        <span class="copyright">&copy Made By <a href="https://www.linkedin.com/in/rohit-siddha-b9446828a" target="_blank" rel="noopener noreferrer">ROHIT</a></span>
+      </div>
+      <span class="copyright"
+        >&copy Made By
+        <a
+          href="https://www.linkedin.com/in/rohit-siddha-b9446828a"
+          target="_blank"
+          rel="noopener noreferrer"
+          >ROHIT</a
+        ></span
+      >
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
