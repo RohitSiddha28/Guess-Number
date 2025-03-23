@@ -8,10 +8,13 @@
   </head>
   <body>
     <div class="box">
-      <button id="mode">Dark</button>
+      <div class="top-row">
+        <span id="difficultyDisplay"></span>
+        <button id="mode">Dark</button>
+      </div>
       <div class="heading">
         <h1>Guess The Number!</h1>
-      </div>
+      </div>    
       <div class="count">Total guess: &nbsp<span id="data">0</span></div>
       <div class="photo">
         <img src="qs_mark.webp" alt="photo" />
@@ -28,12 +31,13 @@
           step="1"
           placeholder="28"
         />
-        <button id = "Submit">Submit</button>
+        <button id = "Submit" onclick="checkguess()">Submit</button>
         <div class="btns">
-          <button id="easy">Easy</button>
-          <button id="medium">Medium</button>
-          <button id="hard">Hard</button>
-          <button id="restart">Restart</button>
+          <button id="easy" onclick="e()">Easy</button>
+          <button id="medium" onclick="m()">Medium</button>
+          <button id="hard" onclick="h()">Hard</button>
+          <button id="survival" onclick="s()">Survival</button>
+          <button id="restart" onclick="r()">Restart</button>
         </div>
       </div>
       <span class="copyright"
